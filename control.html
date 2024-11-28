@@ -3,11 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>JM Pickleball Reviews</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="style.css">
         <script src="scripts.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <div id="lightbox" class="lightbox">
@@ -15,15 +16,16 @@
             <img class="lightbox-content" id="lightbox-img">
         </div>
         <header>
-            <div>
-                <nav>
-                    <ul class="navbar">
-                        <li><a href="index.html">JM Pickleball Reviews</a></li>
-                        <li class="right-shift"><a href="power.html">Power Paddle</a></li>
-                        <li><a href="allcourt.html">All-Court Paddle</a></li>
-                        <li><a href="control.html">Control Paddle</a></li>
-                    </ul>
-                </nav>
+            <div class="topnav">
+                <a href="index.html" id="title">JM Pickleball Reviews</a>
+                <div id="myLinks">
+                    <a href="power.html">Power Paddle</a>
+                    <a href="allcourt.html">All-Court Paddle</a>
+                    <a href="control.html">Control Paddle</a>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
             </div>
         </header>
         <div class="flex-vertical">

@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+  }
+
+  p {
+    font-family: "Archivo", sans-serif;
+  }
+
+  body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-color: rgb(31, 62, 102);
+  }
+
+  header {
+    min-height: 50px;
+  }
+
+  footer {
+    min-height: 25px;
+  }
+
+  @media (max-width: 768px) {
+
+    p {
+      color: white;
+      font-size: 1.3em;
+      font-family: "Archivo", sans-serif;
+    }
+
+    #title {
+      color: white;
+      font-size: 1rem;
+    }
+  
+    .mobile-container {
+      max-width: 480px;
+      margin: auto;
+      background-color: #555;
+      height: 500px;
+      color: white;
+      border-radius: 10px;
+    }
+  
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+      position: relative;
+    }
+  
+    .topnav #myLinks {
+      display: none;
+    }
+  
+    .topnav a {
+      color: white;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      display: block;
+    }
+  
+    .topnav a.icon {
+      background: black;
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+  
+    .active {
+      background-color: #04AA6D;
+      color: white;
+    }
+  
+    .container {
+      display: grid;
+      grid-template-columns: 1fr; /* 1 item per row */
+      gap: 20px; /* Space between rows */
+      text-align: center;
+      margin-top: 25px;
+    }
+  
+    .container img {
+      max-width: 100%; /* Ensure responsiveness */
+      padding: 15px;
+    }
+  
+    .container p {
+      padding: 0px 15px 15px 15px;
+    }
+  
+    .flex-vertical {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr); /* 1 item per row */
+      gap: 20px;
+      align-items: center;
+      justify-items: center;
+      text-align: center;
+      margin-top: 25px;
+      width: 80%;                /* Set the width to 80% */
+      max-width: 1200px;         /* Optional: Limit max width */
+      margin-left: auto;         /* Center the grid horizontally */
+      margin-right: auto;        /* Center the grid horizontally */
+    }
+  
+    .flex-vertical img {
+      max-width: 100%; /* Ensure responsiveness */
+      padding: 15px;
+    }
+  
+    .flex-vertical p {
+      padding: 0px 15px 15px 15px;
+    }
+  
+    .flex-vertical img:hover {
+      cursor: pointer;
+    }
+  }
+  
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  p {
+    color: white;
+    font-size: 1.3em;
+    font-family: "Archivo", sans-serif;
+  }
+
+  #title {
+    color: white;
+    font-size: 1rem;
+  }
+
+  .mobile-container {
+    max-width: 480px;
+    margin: auto;
+    background-color: black;
+    height: 500px;
+    color: white;
+    border-radius: 10px;
+  }
+
+  .topnav {
+    overflow: hidden;
+    background-color: black;
+    position: relative;
+  }
+
+  .topnav #myLinks {
+    display: none;
+  }
+
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+    gap: 20px; /* Space between items */
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  .container img {
+    max-width: 100%; /* Ensure responsiveness */
+    padding: 15px;
+  }
+
+  .container p {
+    padding: 0px 15px 15px 15px;
+  }
+
+  .flex-vertical {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 1 item per row */
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    margin-top: 25px;
+    width: 80%;                /* Set the width to 80% */
+    max-width: 1200px;         /* Optional: Limit max width */
+    margin-left: auto;         /* Center the grid horizontally */
+    margin-right: auto;        /* Center the grid horizontally */
+  }
+
+  .flex-vertical img {
+    max-width: 100%; /* Ensure responsiveness */
+    padding: 15px;
+  }
+
+  .flex-vertical p {
+    padding: 0px 15px 15px 15px;
+  }
+
+  .flex-vertical img:hover {
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1025px) {
+  p {
+    color: white;
+    font-size: 1.3em;
+    font-family: "Archivo", sans-serif;
+  }
+
+  #title {
+    color: white;
+    font-size: 1rem;
+  }
+
+  .mobile-container {
+    max-width: 480px;
+    margin: auto;
+    background-color: #555;
+    height: 500px;
+    color: white;
+    border-radius: 10px;
+  }
+
+  .topnav {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    justify-content: space-between; /* Space out the title and links */
+    align-items: center; /* Center the title and links vertically */
+  }
+
+  /* Ensure links are visible */
+  .topnav #myLinks {
+    display: flex;  /* Keep links visible */
+    flex-direction: row; /* Align links horizontally */
+    gap: 20px; /* Add spacing between links */
+  }
+
+  .topnav a {
+    display: block;
+    padding: 15px 20px;  
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
+    font-family: "Roboto", sans-serif;
+  }
+
+  /* Hide the hamburger icon on large screens */
+  .topnav a.icon {
+    display: none;
+  }
+
+  .topnav a:hover {
+    background-color: rgb(22, 22, 22);
+  }
+
+  .active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    gap: 20px;
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  .container img {
+    max-width: 100%; /* Ensure responsiveness */
+    padding: 15px;
+  }
+
+  .container p {
+    padding: 0px 15px 15px 15px;
+  }
+
+  .flex-vertical {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 1 item per row */
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    margin-top: 25px;
+    width: 80%;                /* Set the width to 80% */
+    max-width: 1200px;         /* Optional: Limit max width */
+    margin-left: auto;         /* Center the grid horizontally */
+    margin-right: auto;        /* Center the grid horizontally */
+  }
+
+  .flex-vertical img {
+    max-width: 100%; /* Ensure responsiveness */
+    padding: 15px;
+  }
+
+  .flex-vertical p {
+    padding: 0px 15px 15px 15px;
+  }
+
+  .flex-vertical img:hover {
+    cursor: pointer;
+  }
+}
+
+
+
+
