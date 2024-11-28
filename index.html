@@ -2,80 +2,50 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Jeremy Mecham Autobiagraphy Webpage</title>
+        <title>JM Pickleball Reviews</title>
         <link rel="stylesheet" href="styles.css">
+        <script src="scripts.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-        <script src="scripts.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>A bit about me, Jeremy Mecham</h1>
-        <img src="images/Jeremy photo.jpg" alt="Jeremy Mecham Photo" width=500px>
-        <!-- Source: Personal Photo-->
-        <p>Hello! My name is Jeremy Mecham. I am a Computer Science Major attending Weber state University.
-            I already have a BS in UX design from Utah State University, but I wanted to dive deeper into programming
-            and computer science. I have done a lot of Python, some web development languages (HTML, CSS, JavaScript), and
-            some SQL (MySQL and Oracle). I have always enjoyed computers and frequently modded Android phones back in the day
-            by adding custom operating systems and boosting performance through overclocking. My personal hobbies include
-            playing video games, playing pickleball, and generally doing anything active.
-        <hr>
-        <h2>Getting to Know Jeremy</h2>
-        <h3>What was the best video game you have played?</h3>
-        <img src="images/ZeldaTOTK.jpg" alt="Zelda: Tears of The Kingdom" width=500px>
-        <!-- Source: https://www.deviantart.com/favorisxp/art/Zelda-Tears-of-the-Kingdom-animated-wallpaper-962529290 -->
-        <br>
-        <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/">Click for License</a>
-        <p>It's hard to say what video game is the best. In recent times, I would say The Legend of Zelda: Tears of the Kingdom.
-            This game was easily one of the best games I have every played. It had an engaging story, amazing gameplay, great graphics,
-            and overall felt like a great adventure.
-        </p>
-        <hr>
-        <h2>Favorite Sports</h2>
-        <img src="images/Pickleball_Players.jpg" alt="Pickleball Players" width=500px>
-        <!-- Source: https://commons.wikimedia.org/wiki/File:Pickleball_Players.jpg -->
-        <br>
-        <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">Click for License</a>
-        <ol>
-            <li>Pickleball</li>
-            <li>Ultimate Frisbee</li>
-            <li>Volleyball</li>
-            <li>Tennis</li>
-            <li>Table Tennis</li>
-        </ol>
-        <hr>
-        <h2>Hobbies</h2>
-        <img src="images/MountainBiking.jpg" alt="Mountain Biking" height=300px>
-        <!-- Source: Personal Photo Mountain Biking-->
-        <img src="images/Waterfall.png" alt="Adams Canyon" height=300px>
-        <!-- Source: Personal Photo Taken From Camera of Adams Canyon-->
-        <ul>
-            <li>Pickleball</li>
-            <li>Photography</li>
-            <li>Mountain Biking</li>
-            <li>Video Games</li>
-            <li>Calisthenics</li>
-            <li>Playing Piano, Singing &#9834;</li>
-        </ul>
-        <hr>
-        <div>
-            <h2>Q & A</h2>
-            <p>Click each question to learn some more about me!</p>
-            <button onclick="showAnswer('answer1')">What is my favorite movie?</button><p id="answer1" class="color">It is tough to pick a favorite, but I would have to say I love Inception. However, I love the StarWars series.</p>
-            <br>
-            <br>
-            <button onclick="showAnswer('answer2')">How long have I been playing Pickleball for?</button><p id="answer2" class="color">I have been playing for about 3 years, but have competed in a few tournaments and hope to compete more.</p>
-            <br>
-            <br>
-            <button onclick="showAnswer('answer3')">What type of photography do I like?</button><p id="answer3" class="color">I mostly do landscape and nature photography, but I have been getting into portraits recently.</p>
-            <br>
-            <br>
-            <button onclick="showAnswer('answer4')">What video games do I like?</button><p id="answer4" class="color">One of my favorite video games is Super Smash Bros. I used to play it competitively, and I was able to compete with some of the top talent in Utah.</p>
-            <br>
-            <br>
-            <button onclick="showAnswer('answer5')">How long have I been playing piano and singing for?</button><p id="answer5" class="color">I have been playing piano on and off for about 10 years, but singing is something I have picked up within the past couple of years.</p>
+        <header>
+            <div>
+                <nav>
+                    <ul class="navbar">
+                        <li><a href="index.html">JM Pickleball Reviews</a></li>
+                        <li class="right-shift"><a href="power.html">Power Paddle</a></li>
+                        <li><a href="allcourt.html">All-Court Paddle</a></li>
+                        <li><a href="control.html">Control Paddle</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="flex-container">
+            <div>
+                <a href="power.html">
+                    <img src="/images/Pro1_Main.JPG" alt="Pro1_Paddle">
+                    <!-- Source: Personal Photo Taken at Barnes Park -->
+                </a>
+                <p>Engage Pursuit Pro1 6.0 Review</p>
+            </div>
+            <div>
+                <a href="allcourt.html">
+                    <img src="/images/Spartus_Main.JPG" alt="Spartus_Paddle">
+                    <!-- Source: Personal Photo Taken at Barnes Park -->
+                </a>
+                <p>Spartus Gladius Centurion Review</p>
+            </div>
+            <div>
+                <a href="control.html">
+                    <img src="/images/Vatic_Main.JPG" alt="Vatic_Paddle">
+                    <!-- Source: Personal Photo Taken at Barnes Park -->
+                </a>
+                <p>Vatic Prism Flash 16mm Review</p>
+            </div>
         </div>
-        <p>&copy; Copyright 2024 Jeremy Mecham</p>
+        <p id="copyright">&copy; Copyright 2024 Jeremy Mecham</p>
     </body>
 </html>
 
