@@ -1,139 +1,142 @@
+/* General Reset and Base Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  line-height: 35px;
+  text-decoration: none;
+}
 
-  p {
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: rgb(31, 62, 102);
+}
+
+p, table, th, td, li {
+  font-family: "Archivo", sans-serif;
+  color: white;
+  font-size: 20px;
+}
+
+header {
+  min-height: 50px;
+}
+
+footer {
+  min-height: 25px;
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border:1px solid white;
     font-family: "Archivo", sans-serif;
-  }
+}
 
-  body {
-    min-height: 100vh;
-    margin: 0;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    background-color: rgb(31, 62, 102);
-  }
+#copyright {
+  font-size: .7rem;
+  margin-left: 5px;
+}
 
-  header {
-    min-height: 50px;
-  }
+/* Lightbox Styles */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.85);
+}
 
-  footer {
-    min-height: 25px;
-  }
+.lightbox-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 55%;
+}
 
-  @media (max-width: 768px) {
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
 
-    p {
-      color: white;
-      font-size: 1.3em;
-      font-family: "Archivo", sans-serif;
-    }
+.close:hover, .close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
 
-    #title {
-      color: white;
-      font-size: 1rem;
-    }
-  
-    .mobile-container {
-      max-width: 480px;
-      margin: auto;
-      background-color: #555;
-      height: 500px;
-      color: white;
-      border-radius: 10px;
-    }
-  
-    .topnav {
-      overflow: hidden;
-      background-color: #333;
-      position: relative;
-    }
-  
-    .topnav #myLinks {
-      display: none;
-    }
-  
-    .topnav a {
-      color: white;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 17px;
-      display: block;
-    }
-  
-    .topnav a.icon {
-      background: black;
-      display: block;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-  
-    .topnav a:hover {
-      background-color: #ddd;
-      color: black;
-    }
-  
-    .active {
-      background-color: #04AA6D;
-      color: white;
-    }
-  
-    .container {
-      display: grid;
-      grid-template-columns: 1fr; /* 1 item per row */
-      gap: 20px; /* Space between rows */
-      text-align: center;
-      margin-top: 25px;
-    }
-  
-    .container img {
-      max-width: 100%; /* Ensure responsiveness */
-      padding: 15px;
-    }
-  
-    .container p {
-      padding: 0px 15px 15px 15px;
-    }
-  
-    .flex-vertical {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr); /* 1 item per row */
-      gap: 20px;
-      align-items: center;
-      justify-items: center;
-      text-align: center;
-      margin-top: 25px;
-      width: 80%;                /* Set the width to 80% */
-      max-width: 1200px;         /* Optional: Limit max width */
-      margin-left: auto;         /* Center the grid horizontally */
-      margin-right: auto;        /* Center the grid horizontally */
-    }
-  
-    .flex-vertical img {
-      max-width: 100%; /* Ensure responsiveness */
-      padding: 15px;
-    }
-  
-    .flex-vertical p {
-      padding: 0px 15px 15px 15px;
-    }
-  
-    .flex-vertical img:hover {
-      cursor: pointer;
-    }
-  }
-  
+/* Containers */
+.container {
+  display: grid;
+  gap: 20px;
+  text-align: center;
+  margin-top: 25px;
+}
 
-@media (min-width: 769px) and (max-width: 1024px) {
+.container img {
+  max-width: 100%;
+  padding: 15px;
+}
 
-  p {
+.container p {
+  padding: 0 15px 15px;
+}
+
+.grid-vertical {
+  display: grid;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+  text-align: left;
+  width: 80%;
+  margin: 25px auto;
+}
+
+.grid-vertical img {
+  max-width: 100%;
+  padding: 15px;
+  border-radius: 35px;
+}
+
+.grid-vertical p {
+  padding: 0 15px 15px;
+}
+
+.grid-vertical img:hover {
+  cursor: pointer;
+}
+
+.grid-vertical p, .grid-vertical h1 {
+  padding: 0px 15px 15px 15px;
+}
+
+h2, h1 {
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  p, table, th, td {
     color: white;
-    font-size: 1.3em;
+    font-size: 14px;
     font-family: "Archivo", sans-serif;
   }
 
@@ -182,21 +185,18 @@
     color: black;
   }
 
-  .active {
-    background-color: #04AA6D;
-    color: white;
-  }
 
   .container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 items per row */
-    gap: 20px; /* Space between items */
+    grid-template-columns: 1fr; 
+    gap: 20px; 
     text-align: center;
     margin-top: 25px;
+    padding: 0 10%;
   }
 
   .container img {
-    max-width: 100%; /* Ensure responsiveness */
+    max-width: 100%; 
     padding: 15px;
   }
 
@@ -204,53 +204,84 @@
     padding: 0px 15px 15px 15px;
   }
 
-  .flex-vertical {
+  .grid-vertical {
     display: grid;
-    grid-template-columns: repeat(1, 1fr); /* 1 item per row */
+    grid-template-columns: repeat(1, 1fr); 
     gap: 20px;
     align-items: center;
     justify-items: center;
     text-align: center;
     margin-top: 25px;
-    width: 80%;                /* Set the width to 80% */
-    max-width: 1200px;         /* Optional: Limit max width */
-    margin-left: auto;         /* Center the grid horizontally */
-    margin-right: auto;        /* Center the grid horizontally */
+    width: 80%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .flex-vertical img {
-    max-width: 100%; /* Ensure responsiveness */
+  .grid-vertical img {
+    max-width: 100%;
     padding: 15px;
   }
 
-  .flex-vertical p {
-    padding: 0px 15px 15px 15px;
-  }
-
-  .flex-vertical img:hover {
+  .grid-vertical img:hover {
     cursor: pointer;
   }
 }
 
-@media (min-width: 1025px) {
-  p {
-    color: white;
-    font-size: 1.3em;
-    font-family: "Archivo", sans-serif;
-  }
-
+@media (min-width: 769px) and (max-width: 1024px) {
   #title {
-    color: white;
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
-  .mobile-container {
-    max-width: 480px;
-    margin: auto;
-    background-color: #555;
-    height: 500px;
+  .topnav {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    height: 100px;
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .topnav a {
+    display: inline-block;
+    padding: 30px 20px;
+    text-decoration: none;
     color: white;
-    border-radius: 10px;
+    font-size: 1.1em;
+    height: 100%;
+  }
+
+  #myLinks {
+    height: 100%;
+  }
+  
+  .topnav a.icon {
+    display: none;
+  }
+  
+  .topnav a:hover {
+    background-color: rgb(22, 22, 22);
+  }
+
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 10%;
+  }
+
+  .grid-vertical {
+    padding: 0 10%;
+  }
+}
+
+@media (min-width: 1025px) {
+  #title {
+    font-size: 2rem;
+  }
+
+  .container {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .topnav {
@@ -258,83 +289,36 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
+    height: 100px;
     background-color: black;
-    justify-content: space-between; /* Space out the title and links */
-    align-items: center; /* Center the title and links vertically */
+    justify-content: space-between;
+    align-items: center;
   }
-
-  /* Ensure links are visible */
-  .topnav #myLinks {
-    display: flex;  /* Keep links visible */
-    flex-direction: row; /* Align links horizontally */
-    gap: 20px; /* Add spacing between links */
-  }
-
+  
   .topnav a {
-    display: block;
-    padding: 15px 20px;  
+    display: inline-block;
+    padding: 30px 20px;
     text-decoration: none;
     color: white;
     font-size: 1.3em;
-    font-family: "Roboto", sans-serif;
+    height: 100%;
   }
 
-  /* Hide the hamburger icon on large screens */
+  #myLinks {
+    height: 100%;
+  }
+  
   .topnav a.icon {
     display: none;
   }
-
+  
   .topnav a:hover {
     background-color: rgb(22, 22, 22);
   }
 
-  .active {
-    background-color: #04AA6D;
-    color: white;
-  }
-
-  .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
-    gap: 20px;
-    text-align: center;
-    margin-top: 25px;
-  }
-
-  .container img {
-    max-width: 100%; /* Ensure responsiveness */
-    padding: 15px;
-  }
-
-  .container p {
-    padding: 0px 15px 15px 15px;
-  }
-
-  .flex-vertical {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); /* 1 item per row */
-    gap: 20px;
-    align-items: center;
-    justify-items: center;
-    text-align: center;
-    margin-top: 25px;
-    width: 80%;                /* Set the width to 80% */
-    max-width: 1200px;         /* Optional: Limit max width */
-    margin-left: auto;         /* Center the grid horizontally */
-    margin-right: auto;        /* Center the grid horizontally */
-  }
-
-  .flex-vertical img {
-    max-width: 100%; /* Ensure responsiveness */
-    padding: 15px;
-  }
-
-  .flex-vertical p {
-    padding: 0px 15px 15px 15px;
-  }
-
-  .flex-vertical img:hover {
-    cursor: pointer;
+  .grid-vertical {
+    padding: 0 15%;
+    max-width: 1500px;
   }
 }
 
